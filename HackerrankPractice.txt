@@ -1,0 +1,10 @@
+-- Revising Aggregations - The Count Function
+
+select distinct count (*) from CITY where POPULATION > 100000;
+
+select sum(POPULATION) from CITY where DISTRICT = 'California';
+
+select avg(POPULATION) from CITY where DISTRICT = 'California';
+
+-- THE PADS Challenge
+
