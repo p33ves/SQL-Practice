@@ -10,3 +10,7 @@ select avg(POPULATION) from CITY where DISTRICT = 'California';
 
 select concat(NAME,'(',SUBSTR(OCCUPATION,1,1),')') from OCCUPATIONS as NAME order by NAME;
 select 'There are a total of ',count(*) as C,concat(lower(OCCUPATION),'s')) as OCTOTAL from OCCUPATIONS group by OCCUPATION order by C, OCTOTAL ; 
+
+-- Revising the Select Query I
+
+select * from CITY where COUNTRYCODE = 'USA' and POPULATION > 100000;
