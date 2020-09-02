@@ -6,6 +6,8 @@ select sum(POPULATION) from CITY where DISTRICT = 'California';
 
 select avg(POPULATION) from CITY where DISTRICT = 'California';
 
+select round(avg(POPULATION)) from CITY;
+
 -- THE PADS Challenge
 
 select concat(concat(NAME,'('),concat(SUBSTR(OCCUPATION,1,1),')')) as NAME from OCCUPATIONS  order by NAME;
