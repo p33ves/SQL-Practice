@@ -14,12 +14,11 @@ select max(POPULATION) - min(POPULATION) as DIFF from CITY;
 
 select * from CITY where COUNTRYCODE = 'USA' and POPULATION > 100000;
 
-
 -- THE PADS Challenge
 
 select concat(concat(NAME,'('),concat(SUBSTR(OCCUPATION,1,1),')')) as NAME from OCCUPATIONS  order by NAME;
 select 'There are a total of ',count(*) as C,concat(lower(OCCUPATION),'s.') as OCTOTAL from OCCUPATIONS group by OCCUPATION order by C, OCTOTAL ; 
 
--- Revising the Select Query I
 
-select * from CITY where COUNTRYCODE = 'USA' and POPULATION > 100000;
+-- THE BLUNDER
+
