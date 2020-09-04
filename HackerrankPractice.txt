@@ -20,5 +20,12 @@ select concat(concat(NAME,'('),concat(SUBSTR(OCCUPATION,1,1),')')) as NAME from 
 select 'There are a total of ',count(*) as C,concat(lower(OCCUPATION),'s.') as OCTOTAL from OCCUPATIONS group by OCCUPATION order by C, OCTOTAL ; 
 
 
--- THE BLUNDER
+-- Weather observation
 
+select round(sum(lat_n),2) as lat, round(sum(long_w),2) as lon from STATION;
+
+select round(sum(lat_n),4) from STATION where lat_n between 38.788 and 137.2345;
+
+select round(max(lat_n),4) from STATION where lat_n < 137.2345;
+
+select round(long_w,4) from STATION where lat_n = (select max(lat_n) from STATION where lat_n< 137.2345);
