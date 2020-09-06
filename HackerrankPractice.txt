@@ -33,3 +33,11 @@ select round(long_w,4) from STATION where lat_n = (select max(lat_n) from STATIO
 -- THE Blunder Challenge
 
 SELECT CEIL(AVG(Salary)-AVG(REPLACE(Salary,'0',''))) FROM EMPLOYEES;
+
+-- JOINS
+
+select sum(city.POPULATION) from city inner join COUNTRY on CITY.CountryCode = COUNTRY.Code where COUNTRY.continent = 'Asia';
+
+select city.name from city inner join COUNTRY on CITY.CountryCode = COUNTRY.Code where COUNTRY.continent = 'Africa';
+
+select COUNTRY.Continent, floor(avg(CITY.POPULATION)) from COUNTRY inner join CITY on CITY.CountryCode = COUNTRY.Code group by COUNTRY.Continent;
