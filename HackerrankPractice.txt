@@ -41,3 +41,7 @@ select sum(city.POPULATION) from city inner join COUNTRY on CITY.CountryCode = C
 select city.name from city inner join COUNTRY on CITY.CountryCode = COUNTRY.Code where COUNTRY.continent = 'Africa';
 
 select COUNTRY.Continent, floor(avg(CITY.POPULATION)) from COUNTRY inner join CITY on CITY.CountryCode = COUNTRY.Code group by COUNTRY.Continent;
+
+-- OFFSETS
+
+select (salary * months) as earn, count(*) from Employee group by earn order by earn desc limit 1;
