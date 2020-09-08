@@ -45,3 +45,13 @@ select COUNTRY.Continent, floor(avg(CITY.POPULATION)) from COUNTRY inner join CI
 -- OFFSETS
 
 select (salary * months) as earn, count(*) from Employee group by earn order by earn desc limit 1;
+
+-- Print right triangle decreasing
+
+DECLARE @var int              
+SELECT @var = 5               
+WHILE @var > 0                
+BEGIN                         
+PRINT replicate('* ', @var)   
+SET @var = @var - 1           
+END                           
